@@ -55,3 +55,4 @@ class Route{
         echo "404 Not found";
     } 
 }
+?>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $title; ?></title>
-    <link rel="stylesheet" href="<?= $asset; ?>css/main.css">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{asset}}css/main.css">
 </head>
 <body>
      <nav>
@@ -13,7 +13,7 @@
                 <picture>
                     <img
                         class="logo-header"
-                        src="/assets/img/logo-2.webp"
+                        src="{{base}}assets/img/logo-2.webp"
                         alt="logo" />
                 </picture>
                 <div class="burger-menu">
@@ -25,7 +25,7 @@
                     <a href="#">Devenir membre</a>
                     <a href="#">Actualité</a>
                     <a href="#">Enchères</a>
-                    <a href="#">Se connecter</a>
+                    <a href="{{base}}/login">Se connecter</a>
                 </div>
             </nav>
             <nav id="sub-navbar">
