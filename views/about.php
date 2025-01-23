@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="<?= ASSET; ?>css/style.css">
 </head>
 <body>
-    view About
-
-    <footer>aaaa</footer>
+    <h1>ABOUT.PHP</h1>
 </body>
 </html>

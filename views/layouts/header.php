@@ -13,7 +13,7 @@
                 <picture>
                     <img
                         class="logo-header"
-                        src="{{base}}assets/img/logo-2.webp"
+                        src="{{asset}}img/logo-2.webp"
                         alt="logo" />
                 </picture>
                 <div class="burger-menu">
@@ -22,10 +22,11 @@
                     <span> </span>
                 </div>
                 <div class="nav-links">
-                    <a href="#">Devenir membre</a>
+                    <a href="{{base}}/user/create">Devenir membre</a>
                     <a href="#">Actualité</a>
                     <a href="#">Enchères</a>
                     <a href="{{base}}/login">Se connecter</a>
+                   
                 </div>
             </nav>
             <nav id="sub-navbar">
@@ -40,6 +41,8 @@
                     placeholder="Rechercher..."
                     aria-label="Rechercher..." />
             </nav>
+             
         </header>
      </nav>
      <main>
+       

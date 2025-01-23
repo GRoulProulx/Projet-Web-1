@@ -1,0 +1,53 @@
+
+:root {
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-xxl: 1.5rem;
+    --font-size-xxxl: 1.875rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+
+p {
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #333587;
+    transition: all 350ms;
+}
+
+a:hover {
+    color: var(--color-link);
+    text-decoration: underline;
+}
+
+a.actif {
+    color: var(--color-link);
+    text-decoration: underline;
+    font-weight: bold;
+}

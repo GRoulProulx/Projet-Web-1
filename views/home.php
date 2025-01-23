@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="<?= ASSET; ?>css/style.css">
 </head>
 <body>  
-    <?= $data; ?>
+    <h1><?= $data; ?></h1>
+    <a href="<?= BASE; ?>/about">About</a>
 
-    <footer>aaaa</footer>
 </body>
 </html>

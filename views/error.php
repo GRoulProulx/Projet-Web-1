@@ -1,3 +1,4 @@
+
 {{ include('layouts/header.php', {title:'Error 404'})}}
     <div class="container">
         <h2>Error</h2>

@@ -3,7 +3,7 @@
             <picture
                 ><img
                     class="logo-footer"
-                    src="/assets/img/logo-3.webp"
+                    src="{{ asset }}/img/logo-3.webp"
                     alt="logo-footer"
             /></picture>
             <section class="menu-footer">
