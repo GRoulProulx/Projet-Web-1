@@ -3,9 +3,9 @@ namespace App\Models;
 use App\Models\CRUD;
 
 class User extends CRUD{
-    protected $table = "user";
+    protected $table = "membre";
     protected $primaryKey = "id";
-    protected $fillable = ['name', 'username', 'password','email', 'privilege_id'];
+    protected $fillable = ['nom', 'username', 'password','email', 'privilege_id'];
 
     public function hashPassword ($password, $cost = 10){
         $options = [

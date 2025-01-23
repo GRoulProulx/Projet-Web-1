@@ -9,11 +9,12 @@ use App\Providers\Auth;
 class UserController {
 
     public function __construct(){
-        Auth::session();
-        Auth::privilege(1);
+         Auth::session();
+         Auth::privilege(4);
     }
 
-    public function create(){
+    
+      public function create(){
         $privilege = new Privilege;
         $privileges = $privilege->select();
         return View::render('user/create', ['privileges' => $privileges]);
@@ -30,11 +31,10 @@ class UserController {
             $user = new User;
             $data['email'] = $data['username'];
             $data['password'] = $user->hashPassword($data['password']);
-            // print_r($data);
-            // die();
+
             $insert  = $user->insert($data);
             if($insert){
-                return View::redirect('login');
+                return View::redirect('user/create');
             }else{
                 return View::render('error');
             }

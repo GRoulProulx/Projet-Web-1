@@ -3,7 +3,7 @@ namespace App\Models;
 
 abstract class CRUD extends \PDO {
     final public function __construct() {
-        parent::__construct('mysql:host=localhost; dbname=ecommerce; port=3306; charset=utf8', 'root', '');
+        parent::__construct('mysql:host=localhost; dbname=stampee; port=3306; charset=utf8', 'root', '');
     }
 
     final public function select($field = null, $order='ASC'){
@@ -31,7 +31,7 @@ abstract class CRUD extends \PDO {
         }
     }
 
-    final public function insert($data){
+    public function insert($data){
 
         $dataKeys = array_fill_keys($this->fillable,'');
         $data = array_intersect_key($data, $dataKeys);
@@ -49,9 +49,8 @@ abstract class CRUD extends \PDO {
             return $this->lastInsertId();
         }else{
             return false;
-        }
+        }  
     }
-
     final public function update($data, $id){
 
         $dataKeys = array_fill_keys($this->fillable,'');
@@ -90,7 +89,6 @@ abstract class CRUD extends \PDO {
             return false;
         }
     }
-
     final public function unique($field, $value){
         $sql = "SELECT * FROM $this->table WHERE $field = :$field";
         $stmt = $this->prepare($sql);

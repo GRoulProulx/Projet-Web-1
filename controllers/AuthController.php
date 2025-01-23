@@ -14,14 +14,14 @@ class AuthController {
         $validator = new Validator;
         $validator->field('username', $data['username'])->min(2)->max(50);
         $validator->field('password', $data['password'])->min(6)->max(20);
-
+        
         if($validator->isSuccess()){
             $user = new User;
             $checkuser = $user->checkuser($data['username'], $data['password']);
             if($checkuser){
-                return View::redirect('clients');
+                return View::redirect('login');
             }else{
-                $errors['message'] = "Please check your credentials";
+                $errors['message'] = "Vous n'avez pas de compte, incrivez-vous!";
                 return View::render('login', ['errors'=>$errors, 'inputs'=>$data]);
             }
         }else{
