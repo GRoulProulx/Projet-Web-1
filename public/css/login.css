@@ -35,4 +35,8 @@
     -webkit-text-fill-color: #333587;
     padding: 1rem;
 }
+
+.btn {
+    cursor: pointer;
+}
     

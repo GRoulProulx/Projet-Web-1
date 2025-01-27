@@ -1,9 +1,9 @@
-{{ include('layouts/header.php', {title:'User Create'})}}
+{{ include('layouts/header.php', {title:'Nouveau membre'})}}
 <div class="container-login">
         <form class="login-form" method="post">
             <h2>Nouveau utilisateur</h2>
             <label>Votre nom
-                <input class="nav-input" type="text" name="name" value="{{ inputs.nom }}">
+                <input class="nav-input" type="text" name="nom" value="{{ inputs.nom }}">
             </label>
              {% if errors.name is defined %}                   
              <span class="error">{{ errors.name }}</span>

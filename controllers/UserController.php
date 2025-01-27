@@ -9,8 +9,8 @@ use App\Providers\Auth;
 class UserController {
 
     public function __construct(){
-         Auth::session();
-         Auth::privilege(4);
+        /*  Auth::session();
+         Auth::privilege(4); */
     }
 
     
@@ -22,7 +22,7 @@ class UserController {
 
     public function store($data){
         $validator = new Validator;
-        $validator->field('name', $data['name'])->min(2)->max(50);
+        $validator->field('nom', $data['nom'])->min(2)->max(50);
         $validator->field('username', $data['username'])->min(2)->max(50)->unique('User');
         $validator->field('password', $data['password'])->min(6)->max(20);
         $validator->field('privilege_id', $data['privilege_id'], "Privilege")->required()->number();

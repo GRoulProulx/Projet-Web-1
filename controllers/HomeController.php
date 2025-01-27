@@ -1,20 +1,11 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\ExampleModel;
+use App\Providers\View;
 
 class HomeController {
     public function index(){
-        /* $model = new ExampleModel;
-        $data = $model->getData();
-        // $data = "Hello from Controller";
-        include('views/home.php'); */
-         echo "page a propos de nous";
+       return View::render('home');
     }
-
-    public function about(){
-        echo "page a propos de nous";
-    }
-
 }
 ?>

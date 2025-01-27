@@ -1,4 +1,4 @@
-{{ include('layouts/header.php', {title:'Connexion'})}}
+{{ include('layouts/header.php', {title:'Réinitialiser le mot de passe'})}}
 <div class="container-login">
         {% if errors is defined %}
         <div class="error">
@@ -10,15 +10,10 @@
         </div>
         {% endif %}
         <form class="login-form" method="post">
-            <h2>Se connecter</h2>
+            <h2>Réinitialiser le mot de passe</h2>
              <label>Courriel
                 <input class="nav-input" type="email" name="username" value="{{ inputs.username }}">
-            </label>
-            <label>Mot de passe
-                <input class="nav-input" type="password" name="password">
-            </label>
-            <input type="submit" class="btn" value="Connexion">
+            <input type="submit" class="btn" value="Réinitialiser">
         </form>
-        <a href="{{asset}}/resetPassword.php">Mot de passe oublié ?</a>
     </div>
 {{ include('layouts/footer.php')}}
