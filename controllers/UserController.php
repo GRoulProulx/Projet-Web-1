@@ -9,8 +9,7 @@ use App\Providers\Auth;
 class UserController {
 
     public function __construct(){
-        /*  Auth::session();
-         Auth::privilege(4); */
+        
     }
 
     

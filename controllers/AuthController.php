@@ -34,6 +34,36 @@ class AuthController {
         session_destroy();
         return View::redirect('login');
     }
+    public function resetPassword(){
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+        $message = $_SESSION['message'] ?? null;
+        unset($_SESSION['message']);
+        return View::render('auth/reset_password', ['message' => $message]);
+    }
+
+    public function resetStore($data){
+        $validator = new Validator;
+        $validator->field('email', $data['email'])->email();
+        if($validator->isSuccess()){
+            $user = new User();
+            $checkuser = $user->checkEmail($data['email']);
+            if($checkuser){
+                if (session_status() == PHP_SESSION_NONE) {
+                    session_start();
+                }
+                $_SESSION['message'] = 'Un courriel a été envoyé.';
+                return View::redirect('resetpassword');
+            }else{
+                $errors['message'] = 'Le courriel n\'existe pas.';
+                return View::render('resetpassword', ['errors'=>$errors, 'user'=>$data]);
+            }
+        }else{
+            $errors = $validator->getErrors();
+            return View::render('resetpassword', ['errors'=>$errors, 'User'=>$data]);
+        }
+    }
 }
 
 ?>

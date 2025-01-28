@@ -56,6 +56,12 @@ class Validator {
         }
         return $this;
     }
+     public function email() {
+        if (!empty($this->value) && !filter_var($this->value, FILTER_VALIDATE_EMAIL)) {
+            $this->errors[$this->key]="$this->name est invalide.";
+        }
+        return $this;
+    }
 
     public function isSuccess(){
         if(empty($this->errors)) 
