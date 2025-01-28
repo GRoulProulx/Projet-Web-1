@@ -34,13 +34,14 @@ class AuthController {
         session_destroy();
         return View::redirect('login');
     }
+
     public function resetPassword(){
         if (session_status() == PHP_SESSION_NONE) {
             session_start();
         }
         $message = $_SESSION['message'] ?? null;
         unset($_SESSION['message']);
-        return View::render('auth/reset_password', ['message' => $message]);
+        return View::render('/resetpassword', ['message' => $message]);
     }
 
     public function resetStore($data){
@@ -54,14 +55,14 @@ class AuthController {
                     session_start();
                 }
                 $_SESSION['message'] = 'Un courriel a été envoyé.';
-                return View::redirect('resetpassword');
+                return View::redirect('/resetpassword');
             }else{
                 $errors['message'] = 'Le courriel n\'existe pas.';
-                return View::render('resetpassword', ['errors'=>$errors, 'user'=>$data]);
+                return View::render('/resetpassword', ['errors'=>$errors, 'user'=>$data]);
             }
         }else{
             $errors = $validator->getErrors();
-            return View::render('resetpassword', ['errors'=>$errors, 'User'=>$data]);
+            return View::render('/resetpassword', ['errors'=>$errors, 'User'=>$data]);
         }
     }
 }

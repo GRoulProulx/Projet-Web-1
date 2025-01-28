@@ -28,9 +28,11 @@
                 </div>
                 <div class="nav-links">
                     <a href="{{base}}/">Accueil</a>
-                    <a href="{{base}}/user/create">Devenir membre</a>
                     <a href="#">Actualité</a>
                     <a href="#">Enchères</a>
+                    {% if guest %}
+                    <a href="{{base}}/user/create">Devenir membre</a>
+                    {% endif %}
                      {% if guest is empty %}
                         <a href="{{base}}/logout">Déconnexion</a>
                     {% else %}

@@ -19,6 +19,6 @@
             </label>
             <input type="submit" class="btn" value="Connexion">
         </form>
-        <a href="{{asset}}/resetPassword.php">Mot de passe oublié ?</a>
+        <a href="{{base}}/reset">Mot de passe oublié ?</a>
     </div>
 {{ include('layouts/footer.php')}}

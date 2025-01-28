@@ -8,11 +8,6 @@ use App\Providers\Auth;
 
 class UserController {
 
-    public function __construct(){
-        
-    }
-
-    
       public function create(){
         $privilege = new Privilege;
         $privileges = $privilege->select();

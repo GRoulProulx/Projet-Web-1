@@ -16,8 +16,8 @@ Route::get('/login', 'AuthController@index');
 Route::post('/login', 'AuthController@store');
 Route::get('/logout', 'AuthController@delete');
 
-
-
+Route::get('/reset', 'AuthController@resetPassword');
+Route::post('/reset', 'AuthController@resetStore');
 
 Route::dispatch();
 ?>
