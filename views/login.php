@@ -12,12 +12,12 @@
         <form class="login-form" method="post">
             <h2>Se connecter</h2>
              <label>Courriel
-                <input class="nav-input" type="email" name="username" value="{{ inputs.username }}">
+                <input class="news-input" type="email" name="username" value="{{ inputs.username }}">
             </label>
             <label>Mot de passe
-                <input class="nav-input" type="password" name="password">
+                <input class="news-input" type="password" name="password">
             </label>
-            <input type="submit" class="btn" value="Connexion">
+            <input type="submit" class="btn-member" value="Connexion">
         </form>
         <a href="{{base}}/reset">Mot de passe oublié ?</a>
     </div>

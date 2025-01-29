@@ -1,68 +1,68 @@
-{{ include('layouts/header.php', { title: 'Création de Timbre' }) }}
+{{ include('layouts/header.php', { title: 'Soumettre un Timbre' }) }}
 
-<div>
-    <div class="container-form">
-        <form class="form" method="post" enctype="multipart/form-data">
-            <h2 class="form-title">Création d'un Timbre</h2>
+    <div class="container-login">
+        <form class="login-form" method="post" enctype="multipart/form-data">
+            <h2>Enchèrir votre Timbre</h2>
 
             <label>
                 Nom
-                <input type="text" class="nav-input" name="nom" value="{{ stamp.name }}">
+                <input type="text" class="news-input" name="nom" value="{{ stamp.name }}">
             </label>
 
             <label>
-               La date
-                <input type="date" class="nav-input" name="date" value="{{ stamp.date }}">
+               Date de création
+                <input type="date" class="news-input" name="date" value="{{ stamp.date }}">
             </label>
 
-            <label">
+            <label>
                 Couleur
-                <select name="couleur" class="select-form">
+                <select name="couleur" class="news-input">
                     <option value=""> Sélectionner une couleur </option>
                 </select>
             </label>
 
             <label>
                 Condition
-                <input type="text" class="nav-input" name="condition" value="{{ stamp.condition }}">
-                <select class="select-form" name="condition">
+                <select class="news-input" name="condition">
                     <option value=""> Sélectionner une condition </option>
+                    <option value="1">Parfaite </option>
+                    <option value="2">Excellente </option>
+                    <option value="3">Bonne </option>
+                    <option value="4">Moyenne </option>
+                    <option value="5">Endommagé </option>
                 </select>
             </label>
             
              <label>
                 Tirage
-                <input type="text" class="nav-input" name="tirage" value="{{ stamp.tirage }}">
+                <input type="text" class="news-input" name="tirage" value="{{ stamp.tirage }}">
+            </label>
+            <label>
+                Dimensions
+                <input type="text" class="news-input" name="dimension" value="{{ stamp.dimension}}">
             </label>
 
              <label>
                 Certifié
-                <select name="certfication">
-                    <option value="0" {% if stamp.certfication is defined and stamp.certfication == 0 %}selected{% endif %}>
+                <select class="news-input" name="certification">
+                    <option value="1">
                         Non</option>
-                    <option value="1" {% if stamp.certfication is defined and stamp.certfication == 1 %}selected{% endif %}>
+                    <option value="2" >
                         Oui</option>
                 </select>
             </label>
             <label>
                 Pays d'origine
-                <select class="select-form" name="pays_id">
+                <select class="news-input" name="pays_id">
                     <option value=""> Sélectionner un pays </option>
-                    
                 </select>
             </label>
             <label>
-                Image principale
-                <input type="file" class="nav-input" name="image_principale">
+                Images
+                <input type="file" class="news-input" name="image">
             </label>
-
-            <label>
-                Images supplémentaires
-                <input type="file" class="nav-input" name="images_supplementaires[]" multiple>
-            </label>
-
-            <button type="submit">Enchèrir</button>
+             <input type="submit" class="btn-member" value="Enchèrir">
         </form>
     </div>
-</div>
+
 {{ include('layouts/footer.php') }}

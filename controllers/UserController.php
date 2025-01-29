@@ -28,7 +28,7 @@ class UserController {
 
             $insert  = $user->insert($data);
             if($insert){
-                return View::redirect('user/create');
+                return View::redirect('login');
             }else{
                 return View::render('error');
             }

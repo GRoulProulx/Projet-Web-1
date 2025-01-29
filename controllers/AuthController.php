@@ -19,10 +19,10 @@ class AuthController {
             $user = new User;
             $checkuser = $user->checkuser($data['username'], $data['password']);
             if($checkuser){
-                return View::redirect('login');
+                return View::redirect('');
             }else{
                 $errors['message'] = "Vous n'avez pas de compte, incrivez-vous!";
-                return View::render('login', ['errors'=>$errors, 'inputs'=>$data]);
+                return View::render('', ['errors'=>$errors, 'inputs'=>$data]);
             }
         }else{
             $errors = $validator->getErrors();

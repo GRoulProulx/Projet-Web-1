@@ -12,7 +12,7 @@
         <form class="login-form" method="post">
             <h2>Réinitialiser le mot de passe</h2>
              <label>Courriel
-                <input class="nav-input" type="email" name="username" value="{{ inputs.username }}">
+                <input class="news-input" type="email" name="username" value="{{ inputs.username }}">
             <input type="submit" class="btn" value="Réinitialiser">
         </form>
     </div>
