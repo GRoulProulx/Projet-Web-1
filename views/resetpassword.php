@@ -13,7 +13,7 @@
             <h2>Réinitialiser le mot de passe</h2>
              <label>Courriel
                 <input class="news-input" type="email" name="username" value="{{ inputs.username }}">
-            <input type="submit" class="btn" value="Réinitialiser">
+            <a href="{{ base }}/resetmessage"><input type="submit" class="btn-member" value="Réinitialiser"></a>
         </form>
     </div>
 {{ include('layouts/footer.php')}}

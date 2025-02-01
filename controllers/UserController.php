@@ -26,7 +26,7 @@ class UserController {
             $data['email'] = $data['username'];
             $data['password'] = $user->hashPassword($data['password']);
 
-            $insert  = $user->insert($data);
+            $insert = $user->insert($data);
             if($insert){
                 return View::redirect('login');
             }else{
