@@ -12,7 +12,9 @@
                 du Lord Stampee!
             </h1>
             <p>Participez dès maintenant.</p>
-            <button class="btn-banner">Voir les enchères</button>
+            <a href="{{base}}/products">
+                <button class="btn-banner">Voir les enchères</button>
+            </a>
         </div>
         <aside class="hero-aside">
             <div class="hero-members">
@@ -36,17 +38,19 @@
         <h1 class="title">Les enchères rencentes</h1>
     </div>
     <section class="card-container">
-        <article class="small-card">
-            <div>
-                <picture><img
-                        class="small-img"
-                        src="{{asset}}/img/stamp1.webp"
-                        alt="timbres" /></picture>
-            </div>
-            <h3>FR #23 MNH OG XF</h3>
-            <h4>3$</h4>
-            <p>3h 40m | 2 mise</p>
-        </article>
+        <a href="{{base}}/productdetails">
+            <article class="small-card">
+                <div>
+                    <picture><img
+                            class="small-img"
+                            src="{{asset}}/img/stamp1.webp"
+                            alt="timbres" /></picture>
+                </div>
+                <h3>FR #23 MNH OG XF</h3>
+                <h4>3$</h4>
+                <p>3h 40m | 2 mise</p>
+            </article>
+        </a>
         <article class="small-card">
             <div>
                 <picture><img

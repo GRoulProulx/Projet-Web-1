@@ -1,0 +1,40 @@
+
+.btn-main {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.btn-main > *{
+    margin: 10px;
+}
+
+.btn-primary {
+    font-size: 24px;
+    padding: 10px;
+    background-color: #333587;
+    color:white;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.btn-primary:hover {
+    background-color: #3a3c99;
+}
+
+.btn-second { 
+    font-size: 24px;
+    padding: 10px;
+    color: #333587;
+    background-color: white;
+    cursor: pointer;
+    border: 2px solid #333587;
+    border-radius: 30px;
+}
+
+.btn-second:hover { 
+    color: #3a3b9a;
+    background-color: rgb(242, 242, 242);
+    
+}
+

@@ -10,10 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,700;0,800;1,100&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{{asset}}css/main.css">
+    <link rel="stylesheet" href="{{asset}}css/productdetails/main.css">
     <script src="/assets/js/burger-menu.js" defer></script>
     <title>{{ title }}</title>
-    
 </head>
 
 <body>
@@ -67,4 +66,3 @@
             </nav>
         </header>
     </nav>
-   

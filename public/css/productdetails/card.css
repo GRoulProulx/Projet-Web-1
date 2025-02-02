@@ -1,0 +1,12 @@
+.big-card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+}
+
+.big-card  > picture {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    align-items: center;
+}

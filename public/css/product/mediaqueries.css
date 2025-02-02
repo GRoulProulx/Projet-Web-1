@@ -1,0 +1,16 @@
+@media screen and (max-width: 768px) {
+  .card-container {
+    padding: 0;
+  }
+  .card-filters > input {
+    justify-content: flex-start;
+    background-position: 8rem;
+    width: auto;
+  }
+  .card-filters > * {
+    display: block;
+    padding: 10px;
+    justify-content: center;
+  }
+}
+

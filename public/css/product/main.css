@@ -1,0 +1,24 @@
+@import url("./filters.css");
+@import url("./cards.css");
+@import url("./general.css");
+@import url(./navigation.css);
+@import url("./mediaqueries.css");
+@import url("./logo.css");
+@import url(./main-footer.css);
+@import url(./hero-banner.css);
+@import url(./base/spacing.css);
+@import url(./base/colors.css);
+
+@import url(./base/typography.css);
+
+@import url(./logo.css);
+@import url(./mediaqueries.css);
+
+@import url(./small-card.css);
+@import url(./newsletter.css);
+@import url(./social.css);
+@import url(./big-card.css);
+
+@import url(./small-banner.css);
+@import url(./login.css);
+
